@@ -34,7 +34,7 @@ function App() {
     <div>
       <button onClick={toggle}>Toggle Counter</button>
       {showCounter ? <Counter /> : null}
-      {showCounter && <Counter />}
+      <Counter style={{ display: showCounter ? "block" : "none" }} />
     </div>
   );
 }
