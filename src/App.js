@@ -3,22 +3,33 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  // [number, React.Dispatch<React.SetStateAction<number>>]
+  console.log("<<<<<<<");
   const [counter, setCounter] = useState(0);
-  // destructor [], {}
+  const [showCounter, setShowCounter] = useState(true);
 
   const inc = () => {
+    console.log(counter);
     setCounter(counter + 1);
   };
   const dec = () => {
+    console.log(counter);
     setCounter(counter - 1);
+  };
+  const toggle = () => {
+    console.log(showCounter);
+    showCounter = !showCounter;
   };
 
   return (
-    <div style={{ display: "flex", margin: "auto" }}>
-      <button onClick={inc}>➕</button>
-      {counter}
-      <button onClick={dec}>➖</button>
+    <div>
+      <button onClick={toggle}>Toggle Counter</button>
+      {showCounter ? (
+        <div style={{ display: "flex", margin: "auto" }}>
+          <button onClick={inc}>➕</button>
+          {counter}
+          <button onClick={dec}>➖</button>
+        </div>
+      ) : null}
     </div>
   );
 }
