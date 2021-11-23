@@ -10,8 +10,11 @@ const todoListInit = [
 export function TodoList() {
   const [todoList, setTodoList] = useState(todoListInit);
   const removeTodo = (id) => {
-    console.log(id);
+    setTodoList(todoList.filter((x) => x.id !== id));
   };
+  //linq
+  //  .Where, .filter
+  //  .Select, .map
   return (
     <table>
       <thead>
