@@ -1,35 +1,26 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  // JSX - JavaScript XML
-  // let Div = React.createElement('div', {className: 'APP'},
-  // React.createElement('header', {className: 'App-header'})
-  // )
-  // class -> className
-  // tag -> close
+  let counter = 0;
 
-  const msg = "سلام دنیا 💃💃💃";
+  const inc = () => {
+    console.log(counter, "+");
+    counter = counter + 1;
+    console.log(counter, "+");
+  };
+  const dec = () => {
+    console.log(counter, "-");
+    counter = counter - 1;
+    console.log(counter, "-");
+  };
 
   return (
-    <>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p style={{ color: "blue" }}>{msg}</p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-      <div></div>
-    </>
+    <div style={{ display: "flex", margin: "auto" }}>
+      <button onClick={inc}>➕</button>
+      {counter}
+      <button onClick={dec}>➖</button>
+    </div>
   );
 }
 
