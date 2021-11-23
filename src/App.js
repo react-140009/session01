@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
+const test = 1;
 function Counter() {
   const [counter, setCounter] = useState(0);
   const inc = () => {
