@@ -2,11 +2,8 @@
 import React, { useState } from "react";
 import "./App.css";
 
-function App() {
-  console.log("<<<<<<<");
+function Counter() {
   const [counter, setCounter] = useState(0);
-  const [showCounter, setShowCounter] = useState(true);
-
   const inc = () => {
     console.log(counter);
     setCounter(counter + 1);
@@ -15,6 +12,19 @@ function App() {
     console.log(counter);
     setCounter(counter - 1);
   };
+
+  return (
+    <div style={{ display: "flex", margin: "auto" }}>
+      <button onClick={inc}>➕</button>
+      {counter}
+      <button onClick={dec}>➖</button>
+    </div>
+  );
+}
+
+function App() {
+  console.log("<<<<<<<");
+  const [showCounter, setShowCounter] = useState(true);
   const toggle = () => {
     console.log(showCounter);
     setShowCounter(!showCounter);
@@ -23,13 +33,7 @@ function App() {
   return (
     <div>
       <button onClick={toggle}>Toggle Counter</button>
-      {showCounter ? (
-        <div style={{ display: "flex", margin: "auto" }}>
-          <button onClick={inc}>➕</button>
-          {counter}
-          <button onClick={dec}>➖</button>
-        </div>
-      ) : null}
+      {showCounter ? Counter() : null}
     </div>
   );
 }
