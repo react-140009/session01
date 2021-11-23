@@ -1,7 +1,15 @@
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  // JSX - JavaScript XML
+  // let Div = React.createElement('div', {className: 'APP'},
+  // React.createElement('header', {className: 'App-header'})
+  // )
+  // class -> className
+  // tag -> close
+
   return (
     <div className="App">
       <header className="App-header">
