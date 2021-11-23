@@ -13,7 +13,7 @@ function App() {
   const msg = "سلام دنیا 💃💃💃";
 
   return (
-    <React.Fragment>
+    <>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -29,7 +29,7 @@ function App() {
         </header>
       </div>
       <div></div>
-    </React.Fragment>
+    </>
   );
 }
 
