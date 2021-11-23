@@ -1,7 +1,6 @@
 import React from "react";
 
-export function TodoItem(props) {
-  const { todo } = props;
+export function TodoItem({ todo }) {
   return (
     <tr>
       <td>{todo.id}</td>
