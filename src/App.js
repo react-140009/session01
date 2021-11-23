@@ -34,6 +34,7 @@ function App() {
     <div>
       <button onClick={toggle}>Toggle Counter</button>
       {showCounter ? <Counter /> : null}
+      {showCounter && <Counter />}
     </div>
   );
 }
