@@ -4,10 +4,8 @@ import "./App.css";
 
 function App() {
   // [number, React.Dispatch<React.SetStateAction<number>>]
-  const state = useState(0);
-  const counter = state[0];
-  const setCounter = state[1];
-  // destructor
+  const [counter, setCounter] = useState(0);
+  // destructor [], {}
 
   const inc = () => {
     console.log(counter, "+");
