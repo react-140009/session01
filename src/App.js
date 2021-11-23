@@ -17,7 +17,7 @@ function App() {
   };
   const toggle = () => {
     console.log(showCounter);
-    showCounter = !showCounter;
+    setShowCounter(!showCounter);
   };
 
   return (
