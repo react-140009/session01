@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { TodoItem } from "./TodoItem";
 
-const todoList = [
+const todoListInit = [
   { id: 1, title: "task 1" },
   { id: 2, title: "task 2" },
   { id: 3, title: "task 3" },
   { id: 4, title: "task 4" },
 ];
 export function TodoList() {
+  const [todoList, settodoList] = useState(todoListInit);
   return (
     <table>
       <thead>
