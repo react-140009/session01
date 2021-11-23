@@ -8,7 +8,10 @@ const todoListInit = [
   { id: 4, title: "task 4" },
 ];
 export function TodoList() {
-  const [todoList, settodoList] = useState(todoListInit);
+  const [todoList, setTodoList] = useState(todoListInit);
+  const removeTodo = (id) => {
+    console.log(id);
+  };
   return (
     <table>
       <thead>
@@ -20,7 +23,11 @@ export function TodoList() {
       </thead>
       <tbody>
         {todoList.map((item) => (
-          <TodoItem key={item.id} todo={item} xyz="true"></TodoItem>
+          <TodoItem
+            key={item.id}
+            todo={item}
+            onRemoveTodo={() => removeTodo(item.id)}
+          ></TodoItem>
         ))}
       </tbody>
     </table>

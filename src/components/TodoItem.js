@@ -1,11 +1,13 @@
 import React from "react";
 
-export function TodoItem({ todo }) {
+export function TodoItem({ todo, onRemoveTodo }) {
   return (
     <tr>
       <td>{todo.id}</td>
       <td>{todo.title}</td>
-      <td>del</td>
+      <td>
+        <button onClick={onRemoveTodo}>❌</button>
+      </td>
     </tr>
   );
 }
