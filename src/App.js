@@ -8,14 +8,10 @@ function App() {
   // destructor [], {}
 
   const inc = () => {
-    console.log(counter, "+");
     setCounter(counter + 1);
-    console.log(counter, "+");
   };
   const dec = () => {
-    console.log(counter, "-");
     setCounter(counter - 1);
-    console.log(counter, "-");
   };
 
   return (
