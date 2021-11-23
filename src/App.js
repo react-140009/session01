@@ -33,7 +33,7 @@ function App() {
   return (
     <div>
       <button onClick={toggle}>Toggle Counter</button>
-      {showCounter ? Counter() : null}
+      {showCounter ? <Counter /> : null}
     </div>
   );
 }
